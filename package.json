@@ -1,0 +1,12 @@
+{
+  "name": "underscore-intersection-test",
+  "version": "1.0.0",
+  "description": "BOOOO",
+  "dependencies": {
+    "benchmark": "1.0.0",
+    "underscore": "1.5.1",
+    "chance": "0.7.3"
+  },
+  
+  "main": "./tests.js"
+}
