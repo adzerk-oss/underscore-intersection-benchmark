@@ -13,9 +13,7 @@ request_keywords = chance.shuffle(request_keywords);
 ad_keywords = _.map(ad_keywords, function(x){return x.toLowerCase()});
 request_keywords = _.map(request_keywords, function(x){return x.toLowerCase()});
 
-
-
-var spacer = "\n";
+var spacer = "\u001c";
 
 var regex_text = function(x, y){
     var lines = x.join(spacer);
@@ -92,7 +90,6 @@ suite.add('dumb intersection', function() {
     console.log(String(event.target));
 })
 .on('complete', function() {
-  //console.log(this);
   console.log('Fastest is ' + this.filter('fastest').pluck('name'));
 });
 
