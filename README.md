@@ -1,6 +1,6 @@
-Comparison between underscore's [intersect method](http://underscorejs.org/docs/underscore.html#section-55) and a naieve implementation cooked up by some not-so-naive engineers.
+Comparison between underscore's [intersect method](http://underscorejs.org/docs/underscore.html#section-55) and a naive implementation cooked up by some not-so-naive engineers.
 
-We've also added a variant of the naieve implementation that short circuits on the first match - this is not how underscore's intersection method works, but it fits our use case in bifrost more completely.
+We've also added a variant of the naive implementation that short circuits on the first match - this is not how underscore's intersection method works, but it fits our use case in bifrost more completely.
 
 To run, 
 
