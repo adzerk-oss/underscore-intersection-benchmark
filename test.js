@@ -28,6 +28,23 @@ var dumb = function(x, y){
     return output;
 };
 
+var dumb_smarter = function(x, y){
+    var holder = {};
+    
+    for(var i=0; i<x.length; i++){
+        holder[x[i]] = true;
+    }
+    
+    for(var i=0; i<y.length; i++){
+        var current = y[i];
+        if(holder[current]){
+            return true;
+        }
+    }
+    
+    return false;
+};
+
 
 var suite = new benchmark.Benchmark.Suite;
 
@@ -36,6 +53,9 @@ suite.add('dumb intersection', function() {
 })
 .add('underscore intersection',  function() { 
     _.intersection(ad_keywords, request_keywords);
+})
+.add('dumb intersection - short circuit',  function() { 
+    dumb_smarter(ad_keywords, request_keywords);
 })
 .on('cycle', function(event) {
     console.log(String(event.target));
